@@ -1,0 +1,6 @@
+[
+  "tests/test_tree.py::test_add_node_by_path",
+  "tests/test_tree.py::test_build_tree_from_dict",
+  "tests/test_tree.py::test_delete_node_by_path",
+  "tests/test_tree.py::test_edit_node_by_path"
+]
