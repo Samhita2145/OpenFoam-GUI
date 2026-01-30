@@ -1,35 +1,61 @@
-# Task 2: Blender Python Script for Cube Grid Manipulation
+# OpenFOAM Screening Task Submission
 
 ## Overview
-This task demonstrates the use of Blender's Python API (`bpy`) to
-programmatically create and manipulate 3D objects.
+This repository contains my submission for the OpenFOAM screening tasks 
 
-Due to hardware and OpenGL limitations on the system
-(Intel HD Graphics 4400), Blender addon UI registration could not be
-completed successfully. Therefore, the task has been implemented
-using a Blender Python script approach, which uses the same `bpy`
-API and logic as an addon.
+The submission consists of **two tasks**, each placed in a separate folder with
+its own detailed README.
 
-## Features Implemented
+---
 
-### Cube Grid Creation
-- Creates N cubes arranged in a 2D grid
-- Enforces constraint: N < 20
-- Automatically clears existing cubes before creation
+## Task 1: Binary Tree with YAML Integration
 
-### Delete Selected Cubes
-- Deletes all selected mesh objects from the scene
+### Description
+Task 1 focuses on implementing a binary tree data structure in Python and
+integrating it with YAML for serialization and deserialization.
 
-## How the Script Works
-- Uses Blender's `bpy.ops.mesh.primitive_cube_add` to create cubes
-- Positions cubes using a grid-based calculation
-- Uses Blender data API to remove selected objects
+### Key Features
+- Binary tree implemented using a Node-based structure
+- Add, edit, and delete operations using path-based traversal (`L`, `R`, `LL`, etc.)
+- Load tree structure from a YAML file
+- Write the updated tree back to a YAML file
+- Readable tree visualization in the terminal
+- Automated unit tests using `pytest`
 
-## Limitations
-- UI panel and buttons could not be registered due to system graphics limitations
-- The logic is implemented as a script instead of an interactive addon
+### How to Run
+```bash
+cd Task1_BinaryTree_YAML
+python main.py
+pytest
+```
 
-## Conclusion
-This implementation demonstrates understanding of Blender's Python API,
-object manipulation, and logical problem-solving, while adapting to
-system constraints in a transparent and professional manner.
+### Output
+Tree structure printed in the terminal
+Updated tree written to output.yaml
+
+📁 Detailed implementation and design decisions are documented in
+Task1_BinaryTree_YAML/README.md
+
+## Task 2: Blender Python Script for Cube Grid Manipulation
+
+### Description
+Task 2 demonstrates the use of Blender’s Python API (bpy) to programmatically
+create and manipulate 3D objects.
+
+### Key Features
+- Creation of N cubes arranged in a 2D grid (N < 20 enforced)
+- Deletion of selected mesh objects
+- Grid-based positioning logic
+- Clean and modular Python implementation
+
+### Implementation Note
+Due to hardware and OpenGL limitations on the system (Intel HD Graphics 4400),
+Blender add-on UI registration could not be completed reliably.
+Therefore, Task 2 is implemented as a Blender Python script using the same
+bpy API and logic that an addon would use, with clear documentation of this
+limitation.
+This approach still demonstrates correct understanding of Blender’s Python API,
+object creation, and mesh manipulation.
+
+📁 Detailed explanation and limitations are documented in
+Task2_Blender_Addon/README.md
